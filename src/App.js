@@ -54,10 +54,10 @@ export default function App() {
         />
       </div>
       <div className="reset">
-        <div style={{ width: '20%' }}>
+        <div id="buttonOptions">
           <Button title="Resetar" onClick={handleReset} />
         </div>
-        <div style={{ width: '20%' }}>
+        <div id="buttonOptions">
           <Button title="Salvar" onClick={handleSaveResult} />
         </div>
       </div>

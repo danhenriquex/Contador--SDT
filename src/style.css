@@ -8,7 +8,11 @@
 }
 
 #buttonCrement {
-  width: 40%;
+  width: 200px;
+}
+
+#buttonOptions {
+  width: 100px;
 }
 
 #count {
