@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './components/Button';
+import { Loading } from './components/Loading';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import './style.css';
 
 export default function App() {
-  const [state, setState] = useState(() => {
+  const [state, setState] = useState();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
     const storage = localStorage.getItem('@contador:save');
-
     if (storage) {
-      return JSON.parse(storage);
+      setState(JSON.parse(storage));
+      setLoading(false);
+    } else {
+      setValue(0);
+      setLoading(false);
     }
-
-    return 0;
-  });
+  }, []);
 
   function handleIncrement() {
     setState(prevState => prevState + 1);
@@ -29,6 +35,10 @@ export default function App() {
 
   function handleReset() {
     setState(0);
+  }
+
+  if (loading) {
+    return <Loading />;
   }
 
   return (

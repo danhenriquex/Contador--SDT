@@ -7,6 +7,12 @@
   justify-content: center;
 }
 
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #buttonCrement {
   width: 200px;
 }
