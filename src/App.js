@@ -34,7 +34,11 @@ export default function App() {
   return (
     <>
       <div className="container">
-        <Button title="Decrementar" onClick={handleDecrement} />
+        <Button
+          title="Decrementar"
+          id="buttonCrement"
+          onClick={handleDecrement}
+        />
         <p
           id="count"
           style={{
@@ -43,13 +47,17 @@ export default function App() {
         >
           {state}
         </p>
-        <Button title="Incrementar" onClick={handleIncrement} />
+        <Button
+          title="Incrementar"
+          id="buttonCrement"
+          onClick={handleIncrement}
+        />
       </div>
       <div className="reset">
-        <div style={{ width: '30%' }}>
+        <div style={{ width: '20%' }}>
           <Button title="Resetar" onClick={handleReset} />
         </div>
-        <div style={{ width: '30%' }}>
+        <div style={{ width: '20%' }}>
           <Button title="Salvar" onClick={handleSaveResult} />
         </div>
       </div>

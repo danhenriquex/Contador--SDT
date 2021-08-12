@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+#buttonCrement {
+  width: 40%;
+}
+
 #count {
   display: flex;
   align-items: center;
