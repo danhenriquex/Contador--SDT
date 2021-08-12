@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './components/Button';
-import { Loading } from './components/Loading';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 import './style.css';
 
@@ -38,7 +36,7 @@ export default function App() {
   }
 
   if (loading) {
-    return <Loading />;
+    <div>loading...</div>;
   }
 
   return (
