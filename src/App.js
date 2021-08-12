@@ -24,6 +24,7 @@ export default function App() {
 
   function handleSaveResult() {
     localStorage.setItem('@contador:save', JSON.stringify(state));
+    alert('Dados salvos com sucesso.');
   }
 
   function handleReset() {
