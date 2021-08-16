@@ -4,19 +4,7 @@ import { Button } from './components/Button';
 import './style.css';
 
 export default function App() {
-  const [state, setState] = useState();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const storage = localStorage.getItem('@contador:save');
-    if (storage) {
-      setState(JSON.parse(storage));
-      setLoading(false);
-    } else {
-      setValue(0);
-      setLoading(false);
-    }
-  }, []);
+  const [state, setState] = useState(0);
 
   function handleIncrement() {
     setState(prevState => prevState + 1);
@@ -26,17 +14,8 @@ export default function App() {
     setState(prevState => prevState - 1);
   }
 
-  function handleSaveResult() {
-    localStorage.setItem('@contador:save', JSON.stringify(state));
-    alert('Dados salvos com sucesso.');
-  }
-
   function handleReset() {
     setState(0);
-  }
-
-  if (loading) {
-    <div>loading...</div>;
   }
 
   return (
@@ -64,9 +43,6 @@ export default function App() {
       <div className="reset">
         <div id="buttonOptions">
           <Button title="Resetar" onClick={handleReset} />
-        </div>
-        <div id="buttonOptions">
-          <Button title="Salvar" onClick={handleSaveResult} />
         </div>
       </div>
     </>
