@@ -1,0 +1,29 @@
+.content {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: white;
+  padding: 0;
+}
+
+.number {
+  font-family: 'Lato', sans-serif;
+  font-size: 200px;
+  font-weight: lighter;
+  margin-bottom: 0px;
+}
+
+.title {
+  width: fit-content;
+  padding: 10px;
+  background: #5a5757;
+  opacity: 0.5;
+  position: relative;
+  bottom: 50px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}

@@ -1,36 +1,6 @@
 .container {
-  display: flex;
   width: 100%;
-  gap: 10px;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.loading {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#buttonCrement {
-  width: 200px;
-}
-
-#buttonOptions {
-  width: 100px;
-}
-
-#count {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 50px;
-  width: 80px;
-
-  border: 1px solid #ddd;
-  border-radius: 10px;
-
-  font-family: 'Roboto', sans-serif;
 }
